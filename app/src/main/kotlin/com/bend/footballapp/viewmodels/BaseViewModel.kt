@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil
 import android.databinding.ObservableInt
 import android.databinding.ViewDataBinding
 import android.support.annotation.CallSuper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
@@ -90,6 +91,7 @@ abstract class BaseViewModel : IViewModel {
     @CallSuper
     open fun handleError(error: Throwable) {
         Toast.makeText(CustomApplication.get(), "Error: " + error.message, Toast.LENGTH_SHORT).show()
+        Log.e(this.toString(), error.toString())
         showNoContent()
     }
 

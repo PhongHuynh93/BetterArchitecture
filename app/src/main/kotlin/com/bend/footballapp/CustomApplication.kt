@@ -2,6 +2,8 @@ package com.bend.footballapp
 
 import android.app.Application
 import android.content.Context
+import com.bend.components.retrofit.ApiInfoProvider
+import com.bend.components.retrofit.Retrofit
 
 
 /**
@@ -13,7 +15,7 @@ import android.content.Context
  * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
-class CustomApplication : Application() {
+class CustomApplication : Application(), ApiInfoProvider {
 
     companion object {
 
@@ -29,5 +31,8 @@ class CustomApplication : Application() {
         super.onCreate()
 
         _context = this
+        Retrofit.initialize(this)
     }
+
+    override fun getBaseUrl() = "http://www.footballapp.com/api/"
 }
