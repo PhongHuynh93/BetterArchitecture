@@ -1,11 +1,11 @@
 package com.bend.footballapp.activities
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
+import android.content.Intent
+import com.bend.footballapp.viewmodels.MainViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override val viewModel = MainViewModel()
+
+    override fun handleIntent(intent: Intent) {}
 }
