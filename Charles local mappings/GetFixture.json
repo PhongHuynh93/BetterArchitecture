@@ -1,0 +1,11 @@
+{
+  "fixtureId": 12,
+  "teamIdHome": 10,
+  "teamIdAway": 12,
+  "startTime": "2015-04-11-12:00",
+  "result" : {
+    "scoreHome": 1,
+    "scoreAway": 1,
+    "finished": true
+  }
+}
