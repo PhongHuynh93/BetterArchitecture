@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.bend.footballapp.viewmodels.items.FixtureWithTeamsItemViewModel"/>
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:foreground="?selectableItemBackground"
+        android:onClick="@{viewModel::onItemClicked}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:paddingTop="@dimen/margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{viewModel.homeTeamScore}"
+                    android:visibility="@{viewModel.homeTeamScore != null ? View.VISIBLE : View.GONE}"
+                    android:padding="@dimen/margin_small"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    app:textHighlighted="@{viewModel.isOngoing}"
+                    tools:text="10"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:padding="@dimen/margin_small"
+                        android:text="@{viewModel.homeTeamName}"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="18sp"
+                        tools:text="Team 1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:padding="@dimen/margin_small"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@{viewModel.awayTeamName}"
+                        android:textSize="18sp"
+                        tools:text="Team 2"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@{viewModel.awayTeamScore}"
+                    android:visibility="@{viewModel.awayTeamScore != null ? View.VISIBLE : View.GONE}"
+                    android:padding="@dimen/margin_small"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    app:textHighlighted="@{viewModel.isOngoing}"
+                    tools:text="12"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{viewModel.startedDateTime}"
+                    tools:text="Started at 8:30"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/ongoing"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="@{viewModel.isOngoing ? View.VISIBLE : View.GONE}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

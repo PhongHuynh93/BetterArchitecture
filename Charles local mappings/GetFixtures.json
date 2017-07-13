@@ -1,33 +1,53 @@
 {
   "fixtures": [{
-    "fixtureId": 12,
-    "teamIdHome": 10,
-    "teamIdAway": 12,
-    "startTime": "2017-06-13T12:00:00.000Z",
+    "fixtureId": 1,
+    "teamIdHome": 1,
+    "teamIdAway": 6,
+    "startTime": "2017-07-17T12:00:00.000Z"
+  },{
+    "fixtureId": 1,
+    "teamIdHome": 5,
+    "teamIdAway": 2,
+    "startTime": "2017-07-13T12:00:00.000Z",
     "result" : {
       "scoreHome": 1,
       "scoreAway": 1,
       "finished": false
     }
   },{
-    "fixtureId": 3,
+    "fixtureId": 2,
     "teamIdHome": 4,
-    "teamIdAway": 10,
-    "startTime": "2017-06-12T12:00:00.000Z",
+    "teamIdAway": 3,
+    "startTime": "2017-07-12T12:00:00.000Z",
     "result" : {
-      "scoreHome": 3,
-      "scoreAway": 2,
+      "scoreHome": 2,
+      "scoreAway": 3,
       "finished": true
     }
   },{
-    "fixtureId": 12,
-    "teamIdHome": 1,
-    "teamIdAway": 3,
-    "startTime": "2017-06-11T12:00:00.000Z",
+    "fixtureId": 3,
+    "teamIdHome": 2,
+    "teamIdAway": 6,
+    "startTime": "2017-07-11T12:00:00.000Z",
     "result" : {
-      "scoreHome": 2,
-      "scoreAway": 4,
+      "scoreHome": 3,
+      "scoreAway": 1,
       "finished": true
     }
+  },{
+    "fixtureId": 4,
+    "teamIdHome": 4,
+    "teamIdAway": 1,
+    "startTime": "2017-07-10T12:00:00.000Z",
+    "result" : {
+      "scoreHome": 4,
+      "scoreAway": 0,
+      "finished": true
+    }
+  },{
+    "fixtureId": 5,
+    "teamIdHome": 3,
+    "teamIdAway": 4,
+    "startTime": "2017-07-18T12:00:00.000Z"
   }]
 }

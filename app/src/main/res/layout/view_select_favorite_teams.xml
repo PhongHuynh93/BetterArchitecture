@@ -21,6 +21,8 @@
         <android.support.v7.widget.Toolbar
             style="@style/Widgets.Toolbar"
             android:layout_width="match_parent"
+            app:navigationIcon="@drawable/ic_close"
+            app:onUpClicked="@{viewModel::onUpClicked}"
             android:layout_height="wrap_content">
 
             <TextView

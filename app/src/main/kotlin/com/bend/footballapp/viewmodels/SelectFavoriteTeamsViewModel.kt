@@ -21,7 +21,11 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
  * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
-class SelectFavoriteTeamsViewModel(val component: SelectFavoriteTeamsComponent) : BaseViewModel() {
+class SelectFavoriteTeamsViewModel(val component: SelectFavoriteTeamsComponent, val listener: Listener) : BaseViewModel() {
+
+    interface Listener {
+        fun navigateUp()
+    }
 
     val itemBinding = ItemBinding.of<TeamItemViewModel>(BR.viewModel, R.layout.item_team)
     val adapter = SmartBindingRecyclerViewAdapter<TeamItemViewModel>()
@@ -49,8 +53,13 @@ class SelectFavoriteTeamsViewModel(val component: SelectFavoriteTeamsComponent) 
         showContent()
     }
 
+    fun onUpClicked(view: View) {
+        listener.navigateUp()
+    }
+
     fun onSaveClicked(view: View) {
         Toast.makeText(CustomApplication.get(), "Saved teams!!", Toast.LENGTH_SHORT).show()
         component.saveFavoriteTeams(adapter.getItems()?.filter { it.isSelected() }?.map { it.team } ?: emptyList())
+        listener.navigateUp()
     }
 }

@@ -30,6 +30,15 @@
                 android:layout_gravity="center"
                 android:text="@string/app_name"/>
 
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:onClick="@{viewModel::onSelectTeamsClicked}"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_gravity="right"
+                app:srcCompat="@drawable/ic_teams"/>
+
         </android.support.v7.widget.Toolbar>
 
         <android.support.v7.widget.RecyclerView
@@ -42,7 +51,7 @@
             app:adapter="@{viewModel.adapter}"
             app:itemBinding="@{viewModel.itemBinding}"
             app:layoutManager="@{LayoutManagers.linear()}"
-            tools:listitem="@layout/item_fixture"/>
+            tools:listitem="@layout/item_fixture_with_teams"/>
 
     </LinearLayout>
 

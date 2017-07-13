@@ -15,11 +15,19 @@ import com.bend.footballapp.viewmodels.SelectFavoriteTeamsViewModel
  * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
-class SelectFavoriteTeamsActivity : BaseActivity() {
+class SelectFavoriteTeamsActivity : BaseActivity(), SelectFavoriteTeamsViewModel.Listener {
 
     override fun handleIntent(intent: Intent) {}
 
-    override val viewModel = SelectFavoriteTeamsViewModel(SelectFavoriteTeamsComponent())
+    override val viewModel = SelectFavoriteTeamsViewModel(SelectFavoriteTeamsComponent(), this)
+
+    override fun navigateUp() {
+        finishActivity()
+    }
+
+    override fun finishActivity() {
+        finishActivityWithAnimation(OUT_BOTTOM)
+    }
 
     companion object {
 

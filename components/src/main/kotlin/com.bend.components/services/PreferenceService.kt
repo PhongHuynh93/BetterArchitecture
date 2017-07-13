@@ -27,7 +27,7 @@ object PreferenceService {
 
     private lateinit var _prefs: SharedPreferences
 
-    fun initialize(context: Context) {
+    fun initialise(context: Context) {
         _prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)!!
     }
 

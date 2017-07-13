@@ -21,6 +21,6 @@ class MainActivity : BaseActivity(), MainViewModel.Listener {
     override fun handleIntent(intent: Intent) {}
 
     override fun openSelectFavoriteTeamsScreen() {
-        launchActivity(SelectFavoriteTeamsActivity.getIntent(this))
+        launchActivity(SelectFavoriteTeamsActivity.getIntent(this), IN_FROM_BOTTOM)
     }
 }
