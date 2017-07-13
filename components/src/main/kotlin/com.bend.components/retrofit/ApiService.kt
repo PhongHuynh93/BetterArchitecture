@@ -23,5 +23,4 @@ interface ApiService {
 
     @GET("/fixtures")
     fun getFixtures(): Single<Response<FixturesResponse>>
-
 }

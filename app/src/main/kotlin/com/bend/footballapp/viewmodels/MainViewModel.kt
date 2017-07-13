@@ -4,7 +4,8 @@ import com.bend.components.MainComponent
 import com.bend.footballapp.BR
 import com.bend.footballapp.R
 import com.bend.footballapp.ui.SmartBindingRecyclerViewAdapter
-import com.bend.footballapp.viewmodels.items.TeamItemViewModel
+import com.bend.footballapp.viewmodels.items.FixtureItemViewModel
+import com.bend.shared.entities.Fixture
 import me.tatarka.bindingcollectionadapter2.ItemBinding
 
 
@@ -23,8 +24,8 @@ class MainViewModel(val component: MainComponent, val listener: Listener) : Base
         fun openSelectFavoriteTeamsScreen()
     }
 
-    val itemBinding = ItemBinding.of<TeamItemViewModel>(BR.viewModel, R.layout.item_team)
-    val adapter = SmartBindingRecyclerViewAdapter<TeamItemViewModel>()
+    val itemBinding = ItemBinding.of<FixtureItemViewModel>(BR.viewModel, R.layout.item_fixture)
+    val adapter = SmartBindingRecyclerViewAdapter<FixtureItemViewModel>()
 
     override val bindingLayoutRes = R.layout.view_main
 
@@ -36,11 +37,11 @@ class MainViewModel(val component: MainComponent, val listener: Listener) : Base
         }
 
         showLoading()
-        //fetchTeams()
+        fetchFixtures()
     }
 
-    /*private fun fetchTeams() {
-        handleDisposal(selectFavoriteTeamsComponent.getTeams()
+    private fun fetchFixtures() {
+        handleDisposal(component.getFixtures()
                 .subscribe({
                     setContent(it)
                 }, {
@@ -48,13 +49,8 @@ class MainViewModel(val component: MainComponent, val listener: Listener) : Base
                 }))
     }
 
-    private fun setContent(teams: List<Team>) {
-        adapter.setItems(teams.map { TeamItemViewModel(it, selectFavoriteTeamsComponent.getFavoriteTeams().contains(it)) })
+    private fun setContent(teams: List<Fixture>) {
+        adapter.setItems(teams.map { FixtureItemViewModel(it) })
         showContent()
     }
-
-    fun onSaveClicked(view: View) {
-        Toast.makeText(CustomApplication.get(), "Saved teams!!", Toast.LENGTH_SHORT).show()
-        selectFavoriteTeamsComponent.saveFavoriteTeams(adapter.getItems()?.filter { it.isSelected() }?.map { it.team } ?: emptyList())
-    }*/
 }

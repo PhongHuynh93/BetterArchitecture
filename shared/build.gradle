@@ -43,4 +43,8 @@ dependencies {
 
     // Gson
     compile 'com.google.code.gson:gson:2.7'
+
+    // DateTime
+    compile 'joda-time:joda-time:2.9.2'
+    compile 'org.joda:joda-convert:1.8.1'
 }

@@ -3,17 +3,17 @@
     "fixtureId": 12,
     "teamIdHome": 10,
     "teamIdAway": 12,
-    "startTime": "2015-04-11-12:00",
+    "startTime": "2017-06-13T12:00:00.000Z",
     "result" : {
       "scoreHome": 1,
       "scoreAway": 1,
-      "finished": true
+      "finished": false
     }
   },{
     "fixtureId": 3,
     "teamIdHome": 4,
     "teamIdAway": 10,
-    "startTime": "2015-04-12-12:00",
+    "startTime": "2017-06-12T12:00:00.000Z",
     "result" : {
       "scoreHome": 3,
       "scoreAway": 2,
@@ -23,7 +23,7 @@
     "fixtureId": 12,
     "teamIdHome": 1,
     "teamIdAway": 3,
-    "startTime": "2015-04-13-12:00",
+    "startTime": "2017-06-11T12:00:00.000Z",
     "result" : {
       "scoreHome": 2,
       "scoreAway": 4,

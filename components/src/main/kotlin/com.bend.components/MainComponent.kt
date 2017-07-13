@@ -1,5 +1,6 @@
 package com.bend.components
 
+import com.bend.components.apis.ApiManager
 import com.bend.components.services.PreferenceService
 
 
@@ -15,4 +16,6 @@ import com.bend.components.services.PreferenceService
 class MainComponent {
 
     fun userHasFavoriteTeams() = PreferenceService.retrieveFavoriteTeams().isNotEmpty()
+
+    fun getFixtures() = ApiManager.fixtureApi.getFixtures().map { it.fixtures }
 }

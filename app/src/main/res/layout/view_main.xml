@@ -32,11 +32,17 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <FrameLayout
+        <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </FrameLayout>
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/margin"
+            android:paddingTop="@dimen/margin"
+            app:adapter="@{viewModel.adapter}"
+            app:itemBinding="@{viewModel.itemBinding}"
+            app:layoutManager="@{LayoutManagers.linear()}"
+            tools:listitem="@layout/item_fixture"/>
 
     </LinearLayout>
 

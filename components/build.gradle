@@ -47,9 +47,5 @@ dependencies {
     compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
     compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
 
-    // DateTime
-    compile 'joda-time:joda-time:2.9.2'
-    compile 'org.joda:joda-convert:1.8.1'
-
     compile 'com.android.support:appcompat-v7:25.3.1'
 }

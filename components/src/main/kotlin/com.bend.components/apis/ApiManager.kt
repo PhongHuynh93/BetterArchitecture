@@ -13,4 +13,6 @@ package com.bend.components.apis
 object ApiManager {
 
     val teamApi = TeamApi()
+
+    val fixtureApi = FixtureApi()
 }
