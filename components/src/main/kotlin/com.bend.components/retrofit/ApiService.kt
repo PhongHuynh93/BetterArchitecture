@@ -1,5 +1,6 @@
 package com.bend.components.retrofit
 
+import com.bend.shared.responses.FixturesResponse
 import com.bend.shared.responses.TeamsResponse
 import io.reactivex.Single
 import retrofit2.Response
@@ -19,5 +20,8 @@ interface ApiService {
 
     @GET("/teams")
     fun getTeams(): Single<Response<TeamsResponse>>
+
+    @GET("/fixtures")
+    fun getFixtures(): Single<Response<FixturesResponse>>
 
 }

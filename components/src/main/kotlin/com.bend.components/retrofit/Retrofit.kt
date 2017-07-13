@@ -23,17 +23,10 @@ object Retrofit {
 
     private var _apiService: ApiService? = null
 
-    var gson: Gson? = null
-        private set
-
     private var _infoProvider: ApiInfoProvider? = null
 
     fun initialize(infoProvider: ApiInfoProvider) {
         _infoProvider = infoProvider
-
-        gson = GsonBuilder()
-                .registerTypeAdapter(DateTime::class.java, DateTimeSerializer())
-                .create()
     }
 
     val apiService: ApiService
@@ -50,7 +43,7 @@ object Retrofit {
                             .baseUrl(_infoProvider!!.getBaseUrl())
                             .client(client)
                             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                            .addConverterFactory(GsonConverterFactory.create(gson))
+                            .addConverterFactory(GsonConverterFactory.create(GsonService.gson))
                             .build()
 
                     _apiService = retrofit.create(ApiService::class.java)

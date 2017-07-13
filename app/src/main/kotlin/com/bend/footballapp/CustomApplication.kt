@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.bend.components.retrofit.ApiInfoProvider
 import com.bend.components.retrofit.Retrofit
+import com.bend.components.services.PreferenceService
 
 
 /**
@@ -31,6 +32,7 @@ class CustomApplication : Application(), ApiInfoProvider {
         super.onCreate()
 
         _context = this
+        PreferenceService.initialize(this)
         Retrofit.initialize(this)
     }
 

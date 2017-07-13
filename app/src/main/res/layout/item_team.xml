@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -13,27 +14,42 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="?selectableItemBackground"
+        android:onClick="@{viewModel.onItemClicked}"
+        android:background="?selectableItemBackground"
         android:layout_marginBottom="@dimen/margin">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="bottom"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@color/colorAccentTransparent"/>
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@color/grey"
+                android:scaleType="centerCrop"
+                app:srcCompat="@{viewModel.bannerUrl}"/>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:padding="@dimen/margin"
-                android:gravity="center"
                 android:text="@{viewModel.teamName}"
-                android:background="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:text="Team Name"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin"
+                app:selectedIcon="@{viewModel.showSelected}"
+                tools:src="@drawable/ic_selected_disabled"/>
 
         </LinearLayout>
 

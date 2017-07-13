@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers"/>
+
+        <variable
+            name="viewModel"
+            type="com.bend.footballapp.viewmodels.SelectFavoriteTeamsViewModel"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            style="@style/Widgets.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/Text.Toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/toolbar_choose_favorite_teams"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/margin"
+                android:paddingTop="@dimen/margin"
+                app:adapter="@{viewModel.adapter}"
+                app:itemBinding="@{viewModel.itemBinding}"
+                app:layoutManager="@{LayoutManagers.linear()}"
+                tools:listitem="@layout/item_team"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{viewModel.onSaveClicked}">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:padding="@dimen/margin"
+                    android:text="@string/done"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -18,29 +18,25 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        style="@style/Widgets.Toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            style="@style/Widgets.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/Text.Toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"/>
+            <TextView
+                style="@style/Text.Toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"/>
 
-    </android.support.v7.widget.Toolbar>
+        </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:paddingBottom="@dimen/margin"
-        app:adapter="@{viewModel.adapter}"
-        app:itemBinding="@{viewModel.itemBinding}"
-        app:layoutManager="@{LayoutManagers.linear()}"
-        tools:listitem="@layout/item_team"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
 
     </LinearLayout>
 

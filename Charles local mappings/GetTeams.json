@@ -3,32 +3,32 @@
     {
       "teamId":1,
       "teamName":"Those Dudes",
-      "bannerUrl":"http://my.teambanner.url/12.jpg"
+      "bannerUrl":"http://www.espn.com/i/nhl/vegas_logos/flamingos.jpg"
     },
     {
       "teamId":2,
       "teamName":"Team Tuggernuts",
-      "bannerUrl":"http://my.teambanner.url/12.jpg"
+      "bannerUrl":"http://www.espn.com/i/nhl/vegas_logos/outlaws.jpg"
     },
     {
       "teamId":3,
       "teamName":"Serious Soccer SOBs",
-      "bannerUrl":"http://my.teambanner.url/12.jpg"
+      "bannerUrl":"http://www.espn.com/i/nhl/vegas_logos/ratpack.jpg"
     },
     {
       "teamId":4,
       "teamName":"Blazing Runners",
-      "bannerUrl":"http://my.teambanner.url/12.jpg"
+      "bannerUrl":"http://www.espn.com/i/nhl/vegas_logos/flamingos.jpg"
     },
     {
       "teamId":12,
       "teamName":"Happy Tree Friends",
-      "bannerUrl":"http://my.teambanner.url/12.jpg"
+      "bannerUrl":"http://www.espn.com/i/nhl/vegas_logos/outlaws.jpg"
     },
     {
       "teamId":10,
       "teamName":"Android Asteroids",
-      "bannerUrl":"http://my.teambanner.url/10.jpg"
+      "bannerUrl":"http://www.espn.com/i/nhl/vegas_logos/outlaws.jpg"
     }
   ]
 }

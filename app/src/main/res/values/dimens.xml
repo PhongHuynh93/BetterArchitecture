@@ -3,6 +3,7 @@
 
     <dimen name="height_toolbar">56dp</dimen>
 
+    <dimen name="margin_small">8dp</dimen>
     <dimen name="margin">16dp</dimen>
 
 </resources>
