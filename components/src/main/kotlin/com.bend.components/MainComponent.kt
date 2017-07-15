@@ -27,6 +27,16 @@ class MainComponent {
         NotificationService.notifyUserOfFixture(fixtureWithTeams)
     }
 
+    fun startReceivingFixtureUpdates(followingFixtureIds: List<Int>) {
+
+        // TODO
+    }
+
+    fun stopReceivingFixtureUpdates() {
+
+        // TODO
+    }
+
     fun getFixturesWithTeams(): Observable<List<FixtureWithTeams>> {
 
         val favoriteTeams = PreferenceService.retrieveFavoriteTeams()
