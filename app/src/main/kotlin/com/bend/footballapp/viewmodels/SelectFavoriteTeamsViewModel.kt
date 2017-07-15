@@ -18,7 +18,6 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
  * SelectFavoriteTeamsViewModel
  *
  * Created on 13/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 class SelectFavoriteTeamsViewModel(val component: SelectFavoriteTeamsComponent, val listener: Listener) : BaseViewModel() {

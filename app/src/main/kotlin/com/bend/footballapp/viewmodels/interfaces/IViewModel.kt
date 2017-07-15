@@ -11,7 +11,6 @@ import android.view.View
  * IViewModel
  *
  * Created on 12/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 interface IViewModel {

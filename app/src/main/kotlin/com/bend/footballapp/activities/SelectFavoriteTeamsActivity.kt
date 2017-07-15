@@ -12,7 +12,6 @@ import com.bend.footballapp.viewmodels.SelectFavoriteTeamsViewModel
  * SelectFavoriteTeamsActivity
  *
  * Created on 13/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 class SelectFavoriteTeamsActivity : BaseActivity(), SelectFavoriteTeamsViewModel.Listener {

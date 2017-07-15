@@ -10,7 +10,6 @@ import org.joda.time.DateTime
  * Fixture
  *
  * Created on 13/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 data class Fixture (

@@ -16,7 +16,6 @@ import com.google.gson.reflect.TypeToken
  * PreferenceService
  *
  * Created on 13/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 object PreferenceService {

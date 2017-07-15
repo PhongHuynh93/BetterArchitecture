@@ -14,7 +14,6 @@ import com.bend.footballapp.ui.ItemDiffUtil
  * FixtureItemViewModel
  *
  * Created on 13/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 class FixtureWithTeamsItemViewModel(val fixtureWithTeams: FixtureWithTeams, val onItemClicked: (FixtureWithTeams) -> Unit) : ItemDiffUtil.ComparableItem {

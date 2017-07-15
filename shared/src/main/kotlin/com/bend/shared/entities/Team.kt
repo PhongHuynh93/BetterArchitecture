@@ -9,7 +9,6 @@ import com.google.gson.annotations.SerializedName
  * Team
  *
  * Created on 12/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 data class Team (

@@ -10,7 +10,6 @@ import com.google.gson.annotations.SerializedName
  * FixturesResponse
  *
  * Created on 13/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 data class FixturesResponse (

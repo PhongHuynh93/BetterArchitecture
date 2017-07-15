@@ -12,7 +12,6 @@ import com.bend.shared.entities.Team
  * TeamItemViewModel
  *
  * Created on 12/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 class TeamItemViewModel(val team: Team, isSelected: Boolean = false) : ItemDiffUtil.ComparableItem {

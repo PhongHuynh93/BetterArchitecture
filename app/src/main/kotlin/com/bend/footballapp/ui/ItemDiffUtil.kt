@@ -9,7 +9,6 @@ import android.support.v7.util.DiffUtil
  * ItemDiffUtil
  *
  * Created on 12/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 class ItemDiffUtil<T : ItemDiffUtil.ComparableItem>(private val _OldList: List<T>?, private val _NewList: List<T>?) : DiffUtil.Callback() {

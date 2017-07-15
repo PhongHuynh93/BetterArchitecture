@@ -10,7 +10,6 @@ import me.tatarka.bindingcollectionadapter2.BindingRecyclerViewAdapter
  * SmartBindingRecyclerViewAdapter
  *
  * Created on 12/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 class SmartBindingRecyclerViewAdapter<T : ItemDiffUtil.ComparableItem> : BindingRecyclerViewAdapter<T>() {

@@ -13,7 +13,6 @@ import retrofit2.Response
  * BaseApi
  *
  * Created on 12/07/2017
- * Copyright (c) 2017 SHAPE A/S. All rights reserved.
  *
  */
 open class BaseApi {
